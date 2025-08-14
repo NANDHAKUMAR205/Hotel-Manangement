@@ -11,7 +11,12 @@ const RoomResult = ({ roomSearchResults }) => {
                 <div className="room-list">
                     {roomSearchResults.map(room => (
                         <div key={room.id} className="room-list-item">
-                            <img className='room-list-item-image' src={room.roomPhotoUrl} alt={room.roomType} />
+                            <img
+  className='room-list-item-image'
+  src={`http://localhost:8080/rooms/${room.id}/image`}
+  alt={room.roomType}
+/>
+
                             <div className="room-details">
                                 <h3>{room.roomType}</h3>
                                 <p>Price: ${room.roomPrice} / night</p>

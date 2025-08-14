@@ -21,7 +21,7 @@ const EditRoomPage = () => {
             try {
                 const response = await ApiService.getRoomById(roomId);
                 setRoomDetails({
-                    roomPhotoUrl: response.room.roomPhotoUrl,
+                    roomPhotoUrl: `http://localhost:8080/rooms/${roomId}/image`,
                     roomType: response.room.roomType,
                     roomPrice: response.room.roomPrice,
                     roomDescription: response.room.roomDescription,

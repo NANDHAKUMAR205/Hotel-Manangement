@@ -62,7 +62,12 @@ const FindBookingPage = () => {
                     <h3>Room Details</h3>
                     <div>
                         <p> Room Type: {bookingDetails.room.roomType}</p>
-                        <img src={bookingDetails.room.roomPhotoUrl} alt="" sizes="" srcSet="" />
+                        <img
+  src={`http://localhost:8080/rooms/${bookingDetails.room.id}/image`}
+  alt={bookingDetails.room.roomType}
+  className="room-photo"
+/>
+
                     </div>
                 </div>
             )}
